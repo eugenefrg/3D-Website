@@ -1,0 +1,89 @@
+canvas {
+    position: fixed;
+    top:0;
+    left: 0;
+}
+main {
+    position:absolute;
+    /*width:100%;*/
+}
+
+* {
+    font-family: monospace;
+}
+h2 {
+    font-size:4em;
+}
+p {
+    font-size:2em;
+}
+section {
+    margin-top:25em;
+    margin-bottom:25em;
+}
+
+header {
+    font-size:5em;
+    font-weight:bold;
+}
+blockquote {
+    font-size:4em
+
+}
+.header {
+    margin-top:50em;
+    margin-bottom:10em;
+    border: 1em solid orange;
+    display:inline-block;
+    maxWidth:1050px;
+    padding-left:4rem;
+    padding-right:4rem;
+    padding-top:4rem;
+    transform: skew(20deg);
+    background-color:yellow
+}
+.header > header,.header > blockquote {
+    transform: skew(-20deg);
+}
+
+.left-text {
+    text-align:left;
+    margin-left:20em;
+}
+.left-text h2 {
+    background-color:black;
+    color:white;
+    transform: skew(-45deg);
+    padding-left: 1em;
+}
+.left-text p {
+    display:block;
+    width:max-content;
+    background-color:white;
+    color: black;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+
+.right-text {
+    text-align:right;
+    margin-right:20em;
+    text-align:right;
+}
+.right-text h2 {
+    background-color:black;
+    color:white;
+    transform: skew(45deg);
+    padding-right: 1em;
+}
+.right-text p {
+    margin-left:auto;
+    text-align:right;
+    display:block;
+    width:max-content;
+    background-color:white;
+    color: black;
+    padding-left: 1em;
+    padding-right: 1em;
+}
