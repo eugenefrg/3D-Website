@@ -3,22 +3,19 @@ import {
     PerspectiveCamera,
     WebGLRenderer,
     TorusGeometry,
-    MeshBasicMaterial,
     Mesh,
     MeshStandardMaterial,
     PointLight,
     AmbientLight,
     PointLightHelper,
     GridHelper,
-    Sphere,
     SphereGeometry,
     MathUtils,
-    TextureLoader, Texture
+    TextureLoader
 } from "three"
 import "./style.css"
 import space from "./images/space.jpg"
 import moonTextureImage from "./images/moon.png"
-import {OrbitControls} from "three/examples/jsm/controls/OrbitControls";
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 
 const scene = new Scene();
@@ -73,7 +70,6 @@ Array(200).fill(0).forEach(()=>addStar())
 const spaceTexture = new TextureLoader().load(space,()=>{
     console.log('loaded')
 },()=>{
-    console.log(progress)
 },()=>console.log("BRUH"))
 scene.background = spaceTexture
 
