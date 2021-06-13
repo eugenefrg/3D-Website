@@ -86,15 +86,20 @@ moon.position.setX(-10);
 
 scene.add(moon)
 
-const loader = new GLTFLoader();
 let eugene:any;
+try {
+const loader = new GLTFLoader();
 loader.load(
-    "./public/assets/randomstickman.glb"
+    "./assets/randomstickman.glb"
     ,  ( gltf ) => {
         eugene = gltf.scene
         scene.add( eugene );
 
     });
+} catch (e) {
+    console.log(e)
+}
+
 
 const moveCamera = ():any =>  {
     const t = document.body.getBoundingClientRect().top;
@@ -113,7 +118,7 @@ document.body.onscroll = () => {
 
 function animate() {
     requestAnimationFrame(animate);
-    eugene.rotation.y += 0.01;
+    eugene ? eugene.rotation.y += 0.01: null;
     torus.rotation.x += 0.01
     // torus.rotation.y += 0.005
     torus.rotation.z += 0.01
